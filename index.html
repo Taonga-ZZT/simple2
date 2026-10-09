@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Echo Snake</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>ECHO SNAKE</h1>
+    <p class="tagline">Your past is chasing you.</p>
+
+    <div class="hud">
+      <div><span class="label">SCORE</span><span id="score">0</span></div>
+      <div><span class="label">BEST</span><span id="best">0</span></div>
+      <div><span class="label">ECHO LAG</span><span id="lag">12</span></div>
+    </div>
+
+    <div class="stage">
+      <canvas id="board" aria-label="Echo Snake game board"></canvas>
+      <div id="overlay">
+        <h2 id="overlay-title">ECHO SNAKE</h2>
+        <p id="overlay-msg">Press an arrow key or Space to start</p>
+      </div>
+    </div>
+
+    <p class="help">
+      <b>Arrows / WASD</b> to steer &middot; <b>Space</b> to pause &middot; swipe on touch screens<br>
+      The glowing <span class="ghost">echo</span> replays your exact path, a few steps behind your tail.
+      Touch it and it's over. Eating food makes the echo stall for a beat, and every few snacks it creeps closer.
+    </p>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
